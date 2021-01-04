@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE5EDE0D25A2281600A0EA9E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5EDE0C25A2281600A0EA9E /* DetailViewController.swift */; };
+		EEAFDB1F25A1FE1900D6550B /* BrountyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAFDB1E25A1FE1900D6550B /* BrountyListViewController.swift */; };
 		EEDDC24C25A1DE0E002C6B9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDC24B25A1DE0E002C6B9F /* AppDelegate.swift */; };
 		EEDDC24E25A1DE0E002C6B9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDC24D25A1DE0E002C6B9F /* SceneDelegate.swift */; };
 		EEDDC25325A1DE0E002C6B9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDDC25125A1DE0E002C6B9F /* Main.storyboard */; };
 		EEDDC25525A1DE0F002C6B9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDDC25425A1DE0F002C6B9F /* Assets.xcassets */; };
 		EEDDC25825A1DE0F002C6B9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDDC25625A1DE0F002C6B9F /* LaunchScreen.storyboard */; };
-		EEDDC26B25A1E367002C6B9F /* BountyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDC26A25A1E367002C6B9F /* BountyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE5EDE0C25A2281600A0EA9E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EEAFDB1E25A1FE1900D6550B /* BrountyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrountyListViewController.swift; sourceTree = "<group>"; };
 		EEDDC24825A1DE0E002C6B9F /* BountyList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BountyList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDDC24B25A1DE0E002C6B9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEDDC24D25A1DE0E002C6B9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -23,7 +26,6 @@
 		EEDDC25425A1DE0F002C6B9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEDDC25725A1DE0F002C6B9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEDDC25925A1DE0F002C6B9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEDDC26A25A1E367002C6B9F /* BountyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				EEDDC24A25A1DE0E002C6B9F /* BountyList */,
-				EEDDC24925A1DE0E002C6B9F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +52,7 @@
 				EEDDC24825A1DE0E002C6B9F /* BountyList.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		EEDDC24A25A1DE0E002C6B9F /* BountyList */ = {
@@ -58,11 +60,13 @@
 			children = (
 				EEDDC24B25A1DE0E002C6B9F /* AppDelegate.swift */,
 				EEDDC24D25A1DE0E002C6B9F /* SceneDelegate.swift */,
-				EEDDC26A25A1E367002C6B9F /* BountyViewController.swift */,
+				EEAFDB1E25A1FE1900D6550B /* BrountyListViewController.swift */,
+				EE5EDE0C25A2281600A0EA9E /* DetailViewController.swift */,
 				EEDDC25125A1DE0E002C6B9F /* Main.storyboard */,
 				EEDDC25425A1DE0F002C6B9F /* Assets.xcassets */,
 				EEDDC25625A1DE0F002C6B9F /* LaunchScreen.storyboard */,
 				EEDDC25925A1DE0F002C6B9F /* Info.plist */,
+				EEDDC24925A1DE0E002C6B9F /* Products */,
 			);
 			path = BountyList;
 			sourceTree = "<group>";
@@ -138,8 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEDDC24C25A1DE0E002C6B9F /* AppDelegate.swift in Sources */,
-				EEDDC26B25A1E367002C6B9F /* BountyViewController.swift in Sources */,
 				EEDDC24E25A1DE0E002C6B9F /* SceneDelegate.swift in Sources */,
+				EEAFDB1F25A1FE1900D6550B /* BrountyListViewController.swift in Sources */,
+				EE5EDE0D25A2281600A0EA9E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
