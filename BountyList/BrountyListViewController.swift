@@ -10,10 +10,19 @@ import UIKit
 class BrountyListViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
     let nameList = ["brook", "chopper", "franky","luffy" , "nami" ,"robin", "sanji","zoro"]
     let bountyList = [33000000,50,44000000,300000000,16000000,8000000,7700000,120000000]
-    
+    override func prepare(for segue: UIStoryboardSegue,sender: Any?){
+          //detailViewController데이터를 준다.
+        if segue.identifier == "showDetail"{
+            let vc = segue.destination as? DetailViewController
+            if let index = sender as? Int{
+                vc?.name = nameList[index]
+                vc?.bounty = bountyList[index]
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
     }
     // UITableViewDataSource에서
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +53,7 @@ class BrountyListViewController: UIViewController,UITableViewDataSource, UITable
     // UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("---> \(indexPath.row)")
-        performSegue(withIdentifier: "showDetail", sender:  nil)
+        performSegue(withIdentifier: "showDetail", sender: indexPath.row)
     }
 }
 

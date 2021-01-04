@@ -17,10 +17,11 @@ class DetailViewController: UIViewController {
     var bounty: Int?
     
     override func prepare(for segue: UIStoryboardSegue,sender: Any?){
-          
+          //detailViewController데이터를 준다.
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
     }
     
     func updateUI(){
