@@ -16,9 +16,6 @@ class DetailViewController: UIViewController {
     var name:String?
     var bounty: Int?
     
-    override func prepare(for segue: UIStoryboardSegue,sender: Any?){
-          //detailViewController데이터를 준다.
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -27,7 +24,7 @@ class DetailViewController: UIViewController {
     func updateUI(){
         
         if let name = self.name,let bounty = self.bounty{
-            let img = UIImage(named:"\(name).jpg")
+            let img = UIImage(named: "\(name).jpg")
             imgView.image = img
             nameLabel.text = name
             bountyLabel.text = "\(bounty)"
