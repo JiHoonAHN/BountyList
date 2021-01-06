@@ -47,8 +47,9 @@ class BrountyListViewController: UIViewController,UITableViewDataSource, UITable
                 let bountyInfo = bountyInfoList[index]
 //                vc?.name = nameList[index]
 //                vc?.bounty = bountyList[index]
-                    vc?.name = bountyInfo.name
-                    vc?.bounty = bountyInfo.bounty
+                    vc?.bountyInfo = bountyInfo
+          //          vc?.name = bountyInfo.name
+            //        vc?.bounty = bountyInfo.bounty
                 
                 }
         }
