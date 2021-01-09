@@ -44,14 +44,6 @@ class DetailViewController: UIViewController {
             nameLabel.text = bountyInfo.name
             bountyLabel.text = "\(bountyInfo.bounty)"
         }
-        
-//        if let name = self.name,let bounty = self.bounty{
-//            let img = UIImage(named: "\(name).jpg")
-//            imgView.image = img
-//            nameLabel.text = name
-//            bountyLabel.text = "\(bounty)"
-//        }
-//    }
     }
 
     @IBAction func close(_ sender: Any) {
@@ -61,6 +53,7 @@ class DetailViewController: UIViewController {
 }
 class DetailViewModel{
     var bountyInfo: BountyInfo?
+    
     func update(model: BountyInfo?){
         bountyInfo = model
     }

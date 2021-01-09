@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BrountyListViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
+class BountyListViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
     
     //MVVM
     
@@ -24,22 +24,10 @@ class BrountyListViewController: UIViewController,UITableViewDataSource, UITable
     // - BountyViewModel
     // > BountyViewModel을 만들고, 뷰 레이어에서 필요한 메서드 만들기
     // > 모델 가지고 있기,, BountyInfo 들
-//    let bountyInfoList: [BountyInfo] = [
-//        BountyInfo(name: "brook", bounty:33000000),
-//        BountyInfo(name: "chopper", bounty: 50),
-//        BountyInfo(name: "franky", bounty: 44000000),
-//        BountyInfo(name: "luffy", bounty: 300000000),
-//        BountyInfo(name: "nami", bounty: 16000000),
-//        BountyInfo(name: "robin", bounty: 80000000),
-//        BountyInfo(name: "sanji", bounty: 77000000),
-//        BountyInfo(name: "zoro", bounty: 12000000)
-//    ]
+
     
     let viewModel = BountyViewModel()
-    
-//    let nameList = ["brook", "chopper", "franky","luffy" , "nami" ,"robin", "sanji","zoro"]
-//    let bountyList = [33000000,50,44000000,300000000,16000000,8000000,7700000,120000000]
-    
+       
     override func prepare(for segue: UIStoryboardSegue,sender: Any?){
           //detailViewController데이터를 준다.
             if segue.identifier == "showDetail"{
@@ -47,11 +35,8 @@ class BrountyListViewController: UIViewController,UITableViewDataSource, UITable
                 if let index = sender as? Int{
                     
                     let bountyInfo = viewModel.bountyInfo(at: index)
-//                vc?.name = nameList[index]
-//                vc?.bounty = bountyList[index]
+
                     vc?.viewModel.update(model: bountyInfo)
-          //          vc?.name = bountyInfo.name
-            //        vc?.bounty = bountyInfo.bounty
                 
                 }
         }
@@ -70,12 +55,10 @@ class BrountyListViewController: UIViewController,UITableViewDataSource, UITable
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell else{
             return UITableViewCell()
         }
-//        let bountyInfo = bountyInfoList[indexPath.row]
-        let bountyInfo = viewModel.bountyInfo(at: indexPath.row)
 
-        cell.imgView.image = bountyInfo.image
-        cell.nameLabel.text = bountyInfo.name
-        cell.bountyLabel.text = "\(bountyInfo.bounty)"
+        let bountyInfo = viewModel.bountyInfo(at: indexPath.row)
+        cell.update(info: bountyInfo)
+
         return cell
     }
     // UITableViewDelegate
@@ -90,21 +73,16 @@ class ListCell : UITableViewCell{
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var nameLabel : UILabel!
     @IBOutlet weak var bountyLabel : UILabel!
+
+    func update(info: BountyInfo){
+        imgView.image = info.image
+        nameLabel.text = info.name
+        bountyLabel.text = "\(info.bounty)"
+    }
 }
 
-struct BountyInfo {
-    let name: String
-    let bounty:Int
-    
-    var image: UIImage?{
-        return UIImage(named: "\(name).jpg")
-    }
-    
-    init(name:String, bounty:Int) {
-        self.name = name
-        self.bounty = bounty
-    }
-}
+
+
 
 class BountyViewModel{
     let bountyInfoList : [BountyInfo] = [
@@ -117,11 +95,17 @@ class BountyViewModel{
         BountyInfo(name: "sanji", bounty: 77000000),
         BountyInfo(name: "zoro", bounty: 12000000)
     ]
+    var sortedList : [BountyInfo]{
+        let sortedList = bountyInfoList.sorted{
+            prev, next in return prev.bounty > next.bounty
+        }
+        return sortedList
+    }
     var numOfBoutyInfoList: Int {
         return bountyInfoList.count
     }
     func bountyInfo(at index:Int) -> BountyInfo{
-        return bountyInfoList[index]
+        return sortedList[index]
     }
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE3D9A0525A75D8D0086F7DB /* BountyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D9A0425A75D8D0086F7DB /* BountyInfo.swift */; };
 		EE5EDE0D25A2281600A0EA9E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5EDE0C25A2281600A0EA9E /* DetailViewController.swift */; };
 		EEAFDB1F25A1FE1900D6550B /* BrountyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAFDB1E25A1FE1900D6550B /* BrountyListViewController.swift */; };
 		EEDDC24C25A1DE0E002C6B9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDC24B25A1DE0E002C6B9F /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE3D9A0425A75D8D0086F7DB /* BountyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyInfo.swift; sourceTree = "<group>"; };
 		EE5EDE0C25A2281600A0EA9E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EEAFDB1E25A1FE1900D6550B /* BrountyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrountyListViewController.swift; sourceTree = "<group>"; };
 		EEDDC24825A1DE0E002C6B9F /* BountyList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BountyList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +63,7 @@
 				EEDDC24B25A1DE0E002C6B9F /* AppDelegate.swift */,
 				EEDDC24D25A1DE0E002C6B9F /* SceneDelegate.swift */,
 				EEAFDB1E25A1FE1900D6550B /* BrountyListViewController.swift */,
+				EE3D9A0425A75D8D0086F7DB /* BountyInfo.swift */,
 				EE5EDE0C25A2281600A0EA9E /* DetailViewController.swift */,
 				EEDDC25125A1DE0E002C6B9F /* Main.storyboard */,
 				EEDDC25425A1DE0F002C6B9F /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE3D9A0525A75D8D0086F7DB /* BountyInfo.swift in Sources */,
 				EEDDC24C25A1DE0E002C6B9F /* AppDelegate.swift in Sources */,
 				EEDDC24E25A1DE0E002C6B9F /* SceneDelegate.swift in Sources */,
 				EEAFDB1F25A1FE1900D6550B /* BrountyListViewController.swift in Sources */,
